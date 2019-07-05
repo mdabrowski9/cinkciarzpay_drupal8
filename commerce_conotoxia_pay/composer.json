@@ -1,0 +1,21 @@
+{
+  "name": "drupal/commerce_conotoxia_pay",
+  "type": "drupal-module",
+  "description": "Provides Commerce integration for Conotoxia Payment.",
+  "homepage": "http://drupal.org/project/commerce_conotoxia_pay",
+  "license": "The MIT License (MIT)",
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  },
+  "require": {
+    "drupal/commerce": "~2.10"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

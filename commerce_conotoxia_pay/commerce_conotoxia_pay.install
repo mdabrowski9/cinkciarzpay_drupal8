@@ -1,0 +1,49 @@
+ <?php
+
+function commerce_conotoxia_pay_schema(): array
+{
+    $schema['commerce_conotoxia_pay'] = [
+        'fields' => [
+            'id' => [
+                'type' => 'serial',
+                'not null' => true,
+            ],
+            'order_id' => [
+                'type' => 'int',
+                'not null' => true,
+            ],
+            'conotoxiapay_id' => [
+                'type' => 'varchar',
+                'length' => 32,
+                'not null' => true,
+            ],
+            'conotoxiapay_status' => [
+                'type' => 'varchar',
+                'length' => 16,
+            ],
+            'payment_created_date' => [
+                'type' => 'varchar',
+                'sqlite_type' => 'datetime',
+                'pgsql_type' => 'datetime',
+                'mysql_type' => 'datetime',
+                'not null' => true,
+            ],
+            'payment_confirm_date' => [
+                'type' => 'varchar',
+                'sqlite_type' => 'datetime',
+                'pgsql_type' => 'datetime',
+                'mysql_type' => 'datetime',
+            ],
+        ],
+        'primary key' => ['id'],
+        'foreign keys' => [
+            'commerce_order_id' => [
+                'table' => 'commerce_order',
+                'columns' => ['order_id' => 'order_id'],
+            ],
+        ],
+    ];
+
+    return $schema;
+
+}

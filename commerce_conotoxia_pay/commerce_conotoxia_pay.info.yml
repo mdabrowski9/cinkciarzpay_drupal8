@@ -1,0 +1,12 @@
+name: Commerce Conotoxia Pay
+description: Provides Commerce integration for the ConotoxiaPay Gateway.
+package: Commerce
+
+type: module
+core: '8.x'
+
+dependencies:
+  - commerce
+  - commerce:commerce_payment
+
+php: 7.2
